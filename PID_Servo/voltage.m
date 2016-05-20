@@ -1,4 +1,4 @@
-load('voltage.mat');
+% load('voltage.mat');
 %initialization time on zero
 time1 = time1 - time1(1);
 
