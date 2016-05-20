@@ -1,7 +1,5 @@
 %load data
-load('PID.mat');
-load('PD.mat');
-load('P.mat');
+load('refined_data.mat');
 %initialization time on zero
 time1_1 = time1_1 - time1_1(1);
 time1_2 = time1_2 - time1_2(1);
@@ -18,8 +16,8 @@ figure(1)
 plot(time1_1,velocity1_1,'LineWidth',1);
 hold on
 title('time-angular velocity Diagram [variable P]','fontsize',12)
-xlabel('Time(sec)','fontsize',12)
-ylabel('Angular Velocity(RPM)','fontsize',12)
+xlabel('Time (sec)','fontsize',12)
+ylabel('Angle (¡Æ)','fontsize',12)
 
 %time-angular velocity Diagram [P=1.0]
 plot(time1_2,velocity1_2,'LineWidth',1);
@@ -33,8 +31,8 @@ figure(2)
 plot(time2_1,velocity2_1,'LineWidth',1);
 hold on
 title('time-angular velocity Diagram [P=1.0, variable D]','fontsize',12)
-xlabel('Time(sec)','fontsize',12)
-ylabel('Angular Velocity(RPM)','fontsize',12)
+xlabel('Time (sec)','fontsize',12)
+ylabel('Angle (¡Æ)','fontsize',12)
 
 %time-angular velocity Diagram [P=1.0, D=0.01]
 plot(time2_2,velocity2_2,'LineWidth',1);
@@ -48,8 +46,8 @@ figure(3)
 plot(time3_1,velocity3_1,'LineWidth',1);
 hold on
 title('time-angular velocity Diagram [P=1.0, D=0.01, variable I]','fontsize',12)
-xlabel('Time(sec)','fontsize',12)
-ylabel('Angular Velocity(RPM)','fontsize',12)
+xlabel('Time (sec)','fontsize',12)
+ylabel('Angle (¡Æ)','fontsize',12)
 
 %time-angular velocity Diagram [P=1.0, D=0.01, I=0.002]
 plot(time3_2,velocity3_2,'LineWidth',1);
